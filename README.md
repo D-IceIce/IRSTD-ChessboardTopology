@@ -17,5 +17,5 @@ For more information or inquiries regarding the IRSTD-Chessboard model and its a
 
 ## Related Work
 
-1 [Dynamic Weight Guided Smooth-Sparse Decomposition for Small Target Detection against Strong Vignetting Background](https://ieeexplore.ieee.org/abstract/document/10352345/)
-2 [One Shot is Enough for Sequential Infrared Small Target Segmentation](https://arxiv.org/abs/2408.04823)
+\[1\] [Dynamic Weight Guided Smooth-Sparse Decomposition for Small Target Detection against Strong Vignetting Background](https://ieeexplore.ieee.org/abstract/document/10352345/) \\
+\[2\] [One Shot is Enough for Sequential Infrared Small Target Segmentation](https://arxiv.org/abs/2408.04823)
