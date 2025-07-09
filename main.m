@@ -9,10 +9,6 @@
     Bingbing Dan, et al. "Infrared dim-small target detection via chessboard topology"
     Optics & Laser Technology, 2024
 
-    Description:
-    This code is a supplementary material for the above-mentioned publication. It implements the DW-SSD model
-    described therein and provides a practical example of the concepts presented.
-
 %}
 
 clc;
@@ -30,7 +26,7 @@ cPixel = [];
 maxC = [];
 minC = [];
 for mm = 2:1+row
-    imgScale = admdfunc(img,scale(mm));
+    imgScale = admdfunc(img,mm);
     threshold = min(imgScale(:)):(max(imgScale(:))-min(imgScale(:)))/col:max(imgScale(:));
     threshold(end) = threshold(end)+1;
     temp = zeros(m,n);
@@ -55,6 +51,7 @@ end
 scoreL = sum(maxC./cPixel,3);
 subplot(131)
 imshow(scoreL,[])
+title('scoreL')
 
 % scoreS
 mostCol = mode(colPixel,3);
@@ -65,9 +62,10 @@ x(x==Inf)=0;
 scoreS = sum(x,3);
 subplot(132)
 imshow(scoreS,[])
+title('scoreS')
 
 % result
 R = mat2gray(scoreS)+mat2gray(scoreL);
 subplot(133)
 imshow(R,[])
-
+title('Result')
